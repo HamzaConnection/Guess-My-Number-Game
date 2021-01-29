@@ -37,7 +37,7 @@ let youWon = () => {
 
 let won = () => {
   let winingMessage = "CONGRATULATION YOU WON!🎉";
-  document.body.style.backgroundColor = "#60b347";
+  setBackGroundColor("#60b347");
   setHighscore(getScore());
   showCorrectAnswer();
   setMessage(winingMessage);
@@ -51,7 +51,7 @@ let youLost = () => {
 };
 let lost = () => {
   let lossingMessage = "YOU LOST!😞";
-  document.body.style.backgroundColor = "#DC143C";
+  setBackGroundColor("#DC143C");
   setMessage(lossingMessage);
   disableGuessing();
 };
@@ -117,4 +117,9 @@ let disableGuessing = () => {
 
 let enableGuessing = () => {
   document.querySelector(".check").disabled = false;
+};
+
+// SET BG COLOR
+let setBackGroundColor = (color) => {
+  document.body.style.backgroundColor = color;
 };
