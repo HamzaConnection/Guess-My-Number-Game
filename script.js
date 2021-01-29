@@ -8,8 +8,6 @@ let getGuess = () => {
   return Number(document.querySelector(".guess").value);
 };
 
-console.log(correctAnswer);
-
 document.querySelector(".check").addEventListener("click", () => {
   if (youWon()) {
     won();
